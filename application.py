@@ -15,8 +15,6 @@ class Post(db.Model):
 app.app_context().push()
 db.create_all()
 
-posts = []
-
 @app.route('/')
 def main():
     posts = Post.query.all()
@@ -35,8 +33,7 @@ def add_post():
         db.session.add(new_post)
         db.session.commit()
         return redirect(url_for('main'))
-    else:
-        return redirect(url_for('main'))
+
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -49,7 +49,7 @@
                <ul class="nav navbar-nav navbar-right">
                     <li><a href="#home" class="smoothScroll">general</a></li>
                     <li><a href="#about" class="smoothScroll">us</a></li>
-                    <li><a href="#team" class="smoothScroll">history(</a></li>  
+                    <li><a href="#team" class="smoothScroll">History</a></li>  
                     <li><a href="#contact" class="smoothScroll">Let's type</a></li>
                </ul>
           </div>
@@ -96,124 +96,40 @@
           </div>
      </div>
 </section>
-
-<section id="team" class="parallax-section">
-     <div class="container">
-          <div class="row">
-               <div class="col-md-offset-2 col-md-8 col-sm-12">
-                    <div class="section-title">
-                         <h1>історіі</h1>
-                    </div>
-               </div>
-               {% for post in posts %}
-               <div class="clearfix"></div>
-               <div id="owl-team" class="owl-carousel">
-                    <div class="col-md-4 col-sm-4 item">
-                         <div class="team-item">
-                              <img src="/static/images/team-image1.jpg" class="img-responsive" alt="">
-                              <div class="team-overlay">
-                                   <ul class="social-icon">
-                                        <li><a href="#" class="fa fa-twitter"></a></li>
-                                        <li><a href="#" class="fa fa-linkedin"></a></li>
-                                   </ul>
-                              </div>
-                         </div>
-                         {% if posts|length >= 1 %}
-                         <h3>{{ posts[0].title }}</h3>
-                         <p>{{ posts[0].content }}</p>
-                         {% else %}
-                         <p>No story</p>  
-                         {% endif %}
-                    </div>
-                    <div class="col-md-4 col-sm-4 item">
-                         <div class="team-item">
-                              <img src="/static/images/team-image2.jpg" class="img-responsive" alt="">
-                              <div class="team-overlay">
-                                   <ul class="social-icon">
-                                        <li><a href="#" class="fa fa-instagram"></a></li>
-                                        <li><a href="#" class="fa fa-github"></a></li>
-                                        <li><a href="#" class="fa fa-facebook"></a></li>
-                                   </ul>
-                              </div>
-                         </div>
-                              {% if posts|length >= 2 %}
-                              <h3>{{ posts[1].title }}</h3>
-                              <p>{{ posts[1].content }}</p>
-                              {% else %}
-                              <p>No story</p>  
-                              {% endif %}
-                    </div>
-
-                    <div class="col-md-4 col-sm-4 item">
-                         <div class="team-item">
-                              <img src="/static/images/team-image3.jpg" class="img-responsive" alt="">
-                              <div class="team-overlay">
-                                   <ul class="social-icon">
-                                        <li><a href="#" class="fa fa-instagram"></a></li>
-                                        <li><a href="#" class="fa fa-dribbble"></a></li>
-                                        <li><a href="#" class="fa fa-behance"></a></li>
-                                   </ul>
-                              </div>
-                         </div>
-                         {% if posts|length >= 3 %}
-                              <h3>{{ posts[2].title }}</h3>
-                              <p>{{ posts[2].content }}</p>
-                         {% else %}
-                         <p>No story</p>  
-                         {% endif %}
-                         </div>
-
-                    <div class="col-md-4 col-sm-4 item">
-                         <div class="team-item">
-                              <img src="/static/images/team-image4.jpg" class="img-responsive" alt="">
-                              <div class="team-overlay">
-                                   <ul class="social-icon">
-                                        <li><a href="#" class="fa fa-twitter"></a></li>
-                                        <li><a href="#" class="fa fa-facebook"></a></li>
-                                        <li><a href="#" class="fa fa-envelope-o"></a></li>
-                                   </ul>
-                              </div>
-                         </div>
-                         {% if posts|length >= 4 %}
-                         <h3>{{ posts[3].title }}</h3>
-                         <p>{{ posts[3].content }}</p>
-                         {% else %}
-                         <p>No story</p>  
-                         {% endif %} 
-                    </div>
-
-                    <div class="col-md-4 col-sm-4 item">
-                         <div class="team-item">
-                              <img src="/static/images/team-image1.jpg" class="img-responsive" alt="">
-                              <div class="team-overlay">
-                                   <ul class="social-icon">
-                                        <li><a href="#" class="fa fa-twitter"></a></li>
-                                        <li><a href="#" class="fa fa-linkedin"></a></li>
-                                   </ul>
-                              </div>
-                         </div>
-                         {% if posts|length >= 5 %}
-                         <h3>{{ posts[5].title }}</h3>
-                         <p>{{ posts[5].content }}</p>
-                         {% else %}
-                         <p>No story</p>  
-                         {% endif %}   
-                         {% endfor %}
-                    </div>
-               </div>
-
+<section id="team">
+     <h3>Історії</h3>
+     <div class="content">
+          <div class="post">
+               <h2>{{ posts[0].title }}</h2>
+               <p>{{ posts[0].content }}</p>  
           </div>
      </div>
-</section>
-
-
+     <div class="content">
+          <div class="post">
+               <h2>{{ posts[1].title }}</h2>
+               <p>{{ posts[1].content }}</p>  
+          </div>
+     </div>
+     <div class="content">
+          <div class="post">
+               <h2>{{ posts[2].title }}</h2>
+               <p>{{ posts[2].content }}</p>  
+          </div>
+     </div>
+     <div class="content">
+          <div class="post">
+               <h2>{{ posts[3].title }}</h2>
+               <p>{{ posts[3].content }}</p>  
+          </div>
+     </div>
+</section> 
 <section id="contact" class="parallax-section">
      <div class="container">
           <div class="row">
 
                <div class="col-md-offset-3 col-md-6 col-sm-12">
                     <div class="section-title">
-                         <h3>напишіть історію</h3>
+                         <h3>Напишіть історію</h3>
                     </div>
                </div>
 
@@ -286,6 +202,5 @@
 <script src="/static/js/magnific-popup-options.js"></script>
 <script src="/static/js/smoothscroll.js"></script>
 <script src="/static/js/custom.js"></script>
-
 </body>
 </html>
